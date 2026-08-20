@@ -19,16 +19,6 @@ A lightweight, mobile-first software prototype for improving access to healthcar
 - Low-fidelity wireframes
 - 3-minute pitch script
 
-## Run the software
-
-No server is required for the demo.
-
-1. Extract the ZIP.
-2. Open `index.html` in Chrome, Edge, or Firefox.
-3. Choose a role and enter the dashboard.
-
-For development in VS Code, install the **Live Server** extension and open `index.html` with Live Server.
-
 ## Important
 
 This is an academic software prototype, not a clinical system. It does not diagnose patients, prescribe medicines, store real patient information, or replace a licensed healthcare professional.
