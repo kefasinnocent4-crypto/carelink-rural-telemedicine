@@ -5,10 +5,10 @@ A lightweight, mobile-first software prototype for improving access to healthcar
 ## What is included
 
 - Working browser-based MVP
-- Patient, Community Health Worker (CHW), and Doctor demo roles
+- Patient, Community Health Worker (CHW), and Doctor roles
 - Appointment/consultation request flow
 - Patient symptom/check-in capture
-- Offline/local storage demo
+- Offline/local storage
 - Low-bandwidth mode
 - Care timeline
 - CHW patient queue
@@ -21,7 +21,7 @@ A lightweight, mobile-first software prototype for improving access to healthcar
 
 ## Run the software
 
-No server is required for the demo.
+No server is required to run this.
 
 1. Extract the ZIP.
 2. Open `index.html` in Chrome, Edge, or Firefox.
