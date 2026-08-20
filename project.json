@@ -1,0 +1,7 @@
+{
+  "name": "CareLink Rural",
+  "type": "academic MVP prototype",
+  "version": "1.0.0",
+  "entry": "index.html",
+  "note": "No real patient data. Not for clinical use."
+}
