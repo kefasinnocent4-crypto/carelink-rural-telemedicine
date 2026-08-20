@@ -22,7 +22,7 @@
             <span class="eyebrow">RURAL HEALTH ACCESS</span>
             <h1>Healthcare should not depend on where you live.</h1>
             <p>Connect patients in underserved communities with healthcare workers and remote doctors using a lightweight, mobile-first workflow.</p>
-            <div class="feature-row"><span>✓ Low data use</span><span>✓ Offline-ready demo</span><span>✓ Appointment booking</span></div>
+            <div class="feature-row"><span>✓ Low data use</span><span>✓ Offline-ready</span><span>✓ Appointment booking</span></div>
           </div>
           <div class="login-card">
             <div class="auth-tabs"><button type="button" id="signInTab" class="auth-tab active">Sign in</button><button type="button" id="signUpTab" class="auth-tab">Sign up</button></div>
@@ -38,7 +38,7 @@
 
             <form id="signUpForm" class="hidden">
               <h2>Create your CareLink account</h2>
-              <p class="muted">Complete the details below to create a demo account.</p>
+              <p class="muted">Complete the details below to create your account.</p>
               <label>Full name<input id="signUpName" type="text" autocomplete="name" placeholder="Enter your full name" required></label>
               <label>Email<input id="signUpEmail" type="email" autocomplete="email" placeholder="you@example.com" required></label>
               <label>Phone contact<input id="signUpPhone" type="tel" autocomplete="tel" placeholder="e.g. 08012345678" required></label>
@@ -47,7 +47,7 @@
               <label>Password<input id="signUpPassword" type="password" autocomplete="new-password" placeholder="Create a password" minlength="6" required></label>
               <label>Confirm password<input id="signUpConfirmPassword" type="password" autocomplete="new-password" placeholder="Confirm your password" minlength="6" required></label>
               <button type="submit" class="primary wide">Create account</button>
-              <small>Demo only. Do not enter real patient or medical information.</small>
+              <small>Prototype only. Do not enter real patient or medical information.</small>
             </form>
           </div>
         </div>
@@ -61,7 +61,7 @@
           <article class="panel"><div class="panel-head"><h2>Quick check-in</h2><span class="pill">Not a diagnosis</span></div><p class="muted">Record what you are experiencing for a healthcare worker to review.</p><label>How are you feeling?<textarea id="symptomInput" rows="4" placeholder="e.g. fever for two days, headache..."></textarea></label><button id="checkinBtn" class="secondary">Save check-in</button></article></div>
           <article class="panel"><div class="panel-head"><h2>My care timeline</h2><button id="syncBtn" class="ghost small">Sync now</button></div><div id="timeline" class="timeline"></div></article>
         </div>
-        <div id="chwDashboard" class="role-dashboard hidden"><div class="stats"><div class="stat"><span>Today's patients</span><strong>12</strong><small>3 awaiting review</small></div><div class="stat"><span>Pending referrals</span><strong>4</strong><small>2 urgent</small></div><div class="stat"><span>Sync status</span><strong id="chwSync">Synced</strong><small>Last sync 2 min ago</small></div></div><article class="panel"><div class="panel-head"><h2>Patient queue</h2><button id="addPatientBtn" class="primary small">+ Register patient</button></div><div id="patientQueue" class="queue"></div></article><article class="panel"><h2>Offline workflow</h2><p class="muted">When the network drops, CareLink keeps the demo records locally and marks them for later synchronization.</p><div class="offline-banner"><strong>Offline-first</strong><span>Records can be captured without an active connection.</span></div></article></div>
+        <div id="chwDashboard" class="role-dashboard hidden"><div class="stats"><div class="stat"><span>Today's patients</span><strong>12</strong><small>3 awaiting review</small></div><div class="stat"><span>Pending referrals</span><strong>4</strong><small>2 urgent</small></div><div class="stat"><span>Sync status</span><strong id="chwSync">Synced</strong><small>Last sync 2 min ago</small></div></div><article class="panel"><div class="panel-head"><h2>Patient queue</h2><button id="addPatientBtn" class="primary small">+ Register patient</button></div><div id="patientQueue" class="queue"></div></article><article class="panel"><h2>Offline workflow</h2><p class="muted">When the network drops, CareLink keeps records locally and marks them for later synchronization.</p><div class="offline-banner"><strong>Offline-first</strong><span>Records can be captured without an active connection.</span></div></article></div>
         <div id="doctorDashboard" class="role-dashboard hidden"><div class="stats"><div class="stat"><span>Today's consultations</span><strong>8</strong><small>2 completed</small></div><div class="stat"><span>Remote referrals</span><strong>5</strong><small>Across 3 clinics</small></div><div class="stat"><span>Average response</span><strong>14 min</strong><small>Target &lt; 30 min</small></div></div><article class="panel"><div class="panel-head"><h2>Consultation requests</h2><span class="pill">Low-bandwidth queue</span></div><div id="doctorQueue" class="queue"></div></article></div>
       </section>
     </main>
