@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b6b5c">
+  <meta name="description" content="CareLink Rural - daily health awareness articles for rural patients">
+  <title>Daily Health Tip | CareLink Rural</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="10" y="4" width="4" height="16" rx="1.5" fill="currentColor"/><rect x="4" y="10" width="16" height="4" rx="1.5" fill="currentColor"/></svg></div><div><strong>CareLink Rural</strong><span>Telemedicine MVP</span></div></div>
+      <div class="status"><a href="index.html" class="ghost" style="text-decoration:none;padding:11px 15px;border-radius:10px;border:1px solid #d5e2df;color:#48615b">Back to app</a></div>
+    </header>
+
+    <main class="shell">
+      <article class="panel" id="healthTipPanel" style="max-width:760px;margin:auto">
+        <span class="eyebrow">DAILY HEALTH TIP</span>
+        <h1 id="tipDate" style="margin:10px 0 4px"></h1>
+        <h2 id="tipTitle" style="margin-top:0;font-size:20px;color:#0b6b5c"></h2>
+        <div id="tipBody"></div>
+        <h2>Quick tips</h2>
+        <ul id="tipList" style="line-height:1.8;color:#3e5650;padding-left:20px"></ul>
+        <p class="muted" style="margin-top:22px;font-size:13px">This article is for general health awareness and does not replace advice from a qualified healthcare worker or doctor. If you or someone near you has a medical emergency, seek care immediately.</p>
+      </article>
+    </main>
+
+    <footer><div class="footer-mark"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="10" y="4" width="4" height="16" rx="1.5" fill="currentColor"/><rect x="4" y="10" width="16" height="4" rx="1.5" fill="currentColor"/></svg></div><div class="footer-text"><strong>CareLink Rural</strong><span>Rural telemedicine software</span><span>©2026 CareLink Rural. All rights reserved.</span></div><nav class="footer-links"><a href="health-tips.html">Health Tips</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:support@carelinkrural.example">Contact support</a></nav></footer>
+  </div>
+
+  <script>
+  (function(){
+    var articles = [
+      {
+        title: "Sleep under a treated mosquito net every night",
+        body: "<p>Malaria remains one of the biggest health risks in many rural communities. It spreads through the bite of infected mosquitoes, which are most active between dusk and dawn. Sleeping under a long-lasting insecticide-treated net (LLIN) every single night — not just when it's convenient — is one of the most effective ways to protect yourself and your family.</p><p>Clearing stagnant water around the home (in buckets, tyres, or gutters) also reduces the number of mosquitoes breeding nearby.</p>",
+        tips: ["Sleep under a treated net every night, including children and pregnant women", "Tuck the net fully under the mattress with no gaps or tears", "Empty or cover any standing water near the house", "Visit a health worker quickly if you notice fever, chills, or body aches"]
+      },
+      {
+        title: "Wash your hands at these key moments",
+        body: "<p>Handwashing with soap is one of the cheapest and most effective ways to prevent the spread of diarrhea, respiratory infections, and other illnesses — especially important where clean water and healthcare can be harder to reach quickly.</p><p>If soap isn't available, ash and clean water can also help remove germs. What matters most is doing it consistently, at the right moments.</p>",
+        tips: ["Wash hands before eating or preparing food", "Wash hands after using the toilet or changing a baby", "Wash hands after touching animals or working the farm", "Scrub for at least 20 seconds and dry with a clean cloth"]
+      },
+      {
+        title: "Make your drinking water safe",
+        body: "<p>Unsafe water is a common cause of diarrhea, especially in children. If your water source isn't piped and treated, it's worth treating it at home before drinking.</p><p>Boiling water for at least one full minute kills most germs. If firewood or fuel is limited, water treatment tablets or a few drops of chlorine solution (following the correct dosage) are a lower-cost alternative.</p>",
+        tips: ["Boil water for at least 1 minute if the source is unclear", "Store treated water in a clean, covered container", "Don't dip hands or cups directly into the storage container — pour instead", "Keep drinking water separate from water used for washing or animals"]
+      },
+      {
+        title: "Eat a balanced plate using what's locally available",
+        body: "<p>Good nutrition doesn't require expensive or imported food. A balanced plate built from local crops — grains, beans, vegetables, and fruit — combined with an occasional source of protein like eggs, fish, or groundnuts, supports strong immunity and healthy growth in children.</p><p>Pregnant women and young children especially benefit from iron-rich foods (like beans and leafy greens) and vitamin A sources (like orange fruits and vegetables).</p>",
+        tips: ["Fill half the plate with vegetables or fruit where possible", "Include a protein source (beans, eggs, fish) most days", "Offer children small, frequent meals rather than one large one", "Reduce excess salt and sugar where you can"]
+      },
+      {
+        title: "Antenatal check-ups protect both mother and baby",
+        body: "<p>Regular antenatal visits — even when a pregnancy feels normal — allow a health worker to catch problems early, such as high blood pressure, anaemia, or a baby that isn't growing as expected. The World Health Organization recommends at least eight contacts with a health provider during pregnancy.</p><p>Attending these visits, even when travel is difficult, significantly lowers the risk of complications for both mother and child.</p>",
+        tips: ["Book your first antenatal visit as early as possible in pregnancy", "Attend every scheduled visit, even if you feel well", "Take iron and folic acid supplements as advised", "Plan in advance where you will deliver and how you'll get there"]
+      },
+      {
+        title: "Know your blood pressure numbers",
+        body: "<p>High blood pressure (hypertension) often has no symptoms, which is why it's sometimes called a 'silent' condition — yet it's a leading cause of stroke and heart disease. Many rural adults have never had their blood pressure checked.</p><p>A community health worker or clinic visit can check this quickly and painlessly. If it's high, small lifestyle changes and, where needed, medication can bring it under control.</p>",
+        tips: ["Get your blood pressure checked at least once a year", "Reduce salt intake in cooking and avoid adding extra salt at the table", "Stay physically active most days of the week", "If you're prescribed medication, take it consistently, not only when you feel unwell"]
+      },
+      {
+        title: "Keep children's immunizations up to date",
+        body: "<p>Vaccines protect children from serious, sometimes fatal, diseases such as measles, polio, and whooping cough. Missing scheduled doses — even by a few weeks — can leave a child vulnerable during a critical window.</p><p>Most immunization schedules start at birth and continue through the first two years of life. A health worker or clinic can tell you exactly which vaccines are due and when.</p>",
+        tips: ["Keep your child's vaccination card safe and bring it to every visit", "Don't delay a dose because your child seems healthy", "Ask your health worker about catch-up doses if any were missed", "Mild fever after a vaccine is common and usually not a cause for concern"]
+      },
+      {
+        title: "Oral rehydration therapy can save a child's life",
+        body: "<p>Diarrhea is a leading cause of death in young children, mainly because of the dehydration it causes — not the infection itself. Oral rehydration solution (ORS), combined with continued feeding and zinc supplements where available, treats most cases effectively at home.</p><p>A simple homemade solution — clean water with the correct ratio of salt and sugar — can help while you arrange to see a health worker, especially if symptoms are severe.</p>",
+        tips: ["Start ORS as soon as diarrhea begins — don't wait for dehydration signs", "Continue breastfeeding or normal feeding during illness", "Seek urgent care if there is blood in the stool, repeated vomiting, or the child is unusually drowsy", "Watch for danger signs: sunken eyes, very little urine, or skin that stays pinched when pulled"]
+      }
+    ];
+
+    function dayOfYear(d){
+      var start = new Date(d.getFullYear(), 0, 0);
+      var diff = d - start;
+      return Math.floor(diff / 86400000);
+    }
+
+    var today = new Date();
+    var index = dayOfYear(today) % articles.length;
+    var article = articles[index];
+
+    document.getElementById('tipDate').textContent = today.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('tipTitle').textContent = article.title;
+    document.getElementById('tipBody').innerHTML = article.body;
+    document.getElementById('tipList').innerHTML = article.tips.map(function(t){ return '<li>' + t + '</li>'; }).join('');
+  })();
+  </script>
+</body>
+</html>
