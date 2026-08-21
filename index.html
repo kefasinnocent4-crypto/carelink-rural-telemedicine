@@ -7,11 +7,12 @@
   <meta name="description" content="CareLink Rural - low-bandwidth telemedicine MVP prototype">
   <title>CareLink Rural | Telemedicine MVP</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
   <div id="app">
     <header class="topbar">
-      <div class="brand"><div class="brand-mark">+</div><div><strong>CareLink Rural</strong><span>Telemedicine MVP</span></div></div>
+      <div class="brand"><div class="brand-mark"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="10" y="4" width="4" height="16" rx="1.5" fill="currentColor"/><rect x="4" y="10" width="16" height="4" rx="1.5" fill="currentColor"/></svg></div><div><strong>CareLink Rural</strong><span>Telemedicine MVP</span></div></div>
       <div class="status"><span id="networkDot" class="dot online"></span><span id="networkText">Online</span><button id="lowBandwidthBtn" class="ghost">Low-bandwidth mode</button></div>
     </header>
 
@@ -48,6 +49,7 @@
               <label>Password<input id="signUpPassword" type="password" autocomplete="new-password" placeholder="Create a password" minlength="6" required></label>
               <label>Confirm password<input id="signUpConfirmPassword" type="password" autocomplete="new-password" placeholder="Confirm your password" minlength="6" required></label>
               <button type="submit" class="primary wide">Create account</button>
+              <small class="muted storage-note">Your account details are stored only in this browser, on this device — not on a server.</small>
             </form>
           </div>
         </div>
@@ -61,19 +63,19 @@
           <div class="grid two"><article class="panel"><div class="panel-head"><h2>Book a consultation</h2><span class="pill">~2–5 MB</span></div><p class="muted">Choose a provider and request a remote consultation.</p><label>Service<select id="serviceSelect"><option>General consultation</option><option>Maternal health</option><option>Child health</option><option>Chronic care follow-up</option></select></label><label>Preferred time<select id="timeSelect"></select></label><label>Preferred date<input id="dateSelect" type="date"></label><button id="bookBtn" class="primary">Request consultation</button></article>
           <article class="panel"><div class="panel-head"><h2>Quick check-in</h2><span class="pill">Not a diagnosis</span></div><p class="muted">Record what you are experiencing for a healthcare worker to review.</p><label>How are you feeling?<textarea id="symptomInput" rows="4" placeholder="e.g. fever for two days, headache..."></textarea></label><button id="checkinBtn" class="secondary">Save check-in</button></article></div>
           <article class="panel"><div class="panel-head"><h2>Available doctors</h2></div><p class="muted">Consultants available for remote consultation.</p><div class="queue">
-            <div class="queue-item"><div><strong>Dr Philip Eze</strong><small>Consultant Neurosurgeon</small></div></div>
-            <div class="queue-item"><div><strong>Dr Abubakar Salisu</strong><small>Consultant Cardiologist</small></div></div>
-            <div class="queue-item"><div><strong>Dr Hauwa Zakari</strong><small>Consultant Gynaecologist</small></div></div>
-            <div class="queue-item"><div><strong>Dr Ezekiel Obadiah</strong><small>Consultant Ophthalmologist</small></div></div>
+            <div class="queue-item"><div class="avatar">PE</div><div><strong>Dr Philip Eze</strong><small>Consultant Neurosurgeon</small></div><span class="pill pill-ok">Available</span></div>
+            <div class="queue-item"><div class="avatar">AS</div><div><strong>Dr Abubakar Salisu</strong><small>Consultant Cardiologist</small></div><span class="pill pill-ok">Available</span></div>
+            <div class="queue-item"><div class="avatar">HZ</div><div><strong>Dr Hauwa Zakari</strong><small>Consultant Gynaecologist</small></div><span class="pill pill-ok">Available</span></div>
+            <div class="queue-item"><div class="avatar">EO</div><div><strong>Dr Ezekiel Obadiah</strong><small>Consultant Ophthalmologist</small></div><span class="pill pill-ok">Available</span></div>
           </div></article>
           <article class="panel"><div class="panel-head"><h2>My care timeline</h2><button id="syncBtn" class="ghost small">Sync now</button></div><div id="timeline" class="timeline"></div></article>
         </div>
-        <div id="chwDashboard" class="role-dashboard hidden"><div class="stats"><div class="stat"><span>Today's patients</span><strong>12</strong><small>3 awaiting review</small></div><div class="stat"><span>Pending referrals</span><strong>4</strong><small>2 urgent</small></div><div class="stat"><span>Sync status</span><strong id="chwSync">Synced</strong><small>Last sync 2 min ago</small></div></div><article class="panel"><div class="panel-head"><h2>Patient queue</h2><button id="addPatientBtn" class="primary small">+ Register patient</button></div><div id="patientQueue" class="queue"></div></article><article class="panel"><h2>Offline workflow</h2><p class="muted">When the network drops, CareLink keeps records locally and marks them for later synchronization.</p><div class="offline-banner"><strong>Offline-first</strong><span>Records can be captured without an active connection.</span></div></article></div>
+        <div id="chwDashboard" class="role-dashboard hidden"><div class="stats"><div class="stat"><span>Today's patients</span><strong>12</strong><small>3 awaiting review</small></div><div class="stat"><span>Pending referrals</span><strong>4</strong><small>2 urgent</small></div><div class="stat"><span>Sync status</span><strong id="chwSync">Synced</strong><small>Last sync 2 min ago</small></div></div><article class="panel"><div class="panel-head"><h2>Patient queue</h2><button id="addPatientBtn" class="primary small"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><rect x="10" y="4" width="4" height="16" rx="1" fill="currentColor"/><rect x="4" y="10" width="16" height="4" rx="1" fill="currentColor"/></svg>Register patient</button></div><div id="patientQueue" class="queue"></div></article><article class="panel"><h2>Offline workflow</h2><p class="muted">When the network drops, CareLink keeps records locally and marks them for later synchronization.</p><div class="offline-banner"><strong>Offline-first</strong><span>Records can be captured without an active connection.</span></div></article></div>
         <div id="doctorDashboard" class="role-dashboard hidden"><div class="stats"><div class="stat"><span>Today's consultations</span><strong>8</strong><small>2 completed</small></div><div class="stat"><span>Remote referrals</span><strong>5</strong><small>Across 3 clinics</small></div><div class="stat"><span>Average response</span><strong>14 min</strong><small>Target &lt; 30 min</small></div></div><article class="panel"><div class="panel-head"><h2>Consultation requests</h2><span class="pill">Low-bandwidth queue</span></div><div id="doctorQueue" class="queue"></div></article></div>
       </section>
     </main>
     <div id="toast" class="toast"></div>
-    <footer><div class="footer-mark">+</div><div class="footer-text"><strong>CareLink Rural</strong><span>Rural telemedicine software</span><span>©2026 CareLink Rural. All rights reserved.</span></div></footer>
+    <footer><div class="footer-mark"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="10" y="4" width="4" height="16" rx="1.5" fill="currentColor"/><rect x="4" y="10" width="16" height="4" rx="1.5" fill="currentColor"/></svg></div><div class="footer-text"><strong>CareLink Rural</strong><span>Rural telemedicine software</span><span>©2026 CareLink Rural. All rights reserved.</span></div><nav class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:support@carelinkrural.example">Contact support</a></nav></footer>
   </div>
   <script src="app.js"></script>
 </body>
